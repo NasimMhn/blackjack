@@ -1,0 +1,32 @@
+/* 
+#00952C - green
+#009549 - table green
+#FF2600 - red/orange
+#FDB3B3 - pink
+#FF6E43 - orange 
+*/
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  background-color: #FF6E43;
+}
+
+main {
+  /* background-image: url("./assests/green.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: #009549;
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #FF6E43;
+}
