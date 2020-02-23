@@ -1,4 +1,5 @@
 
+
 // shuffle cards
 const shuffleCards = (array) => {
   let currentIndex = array.length
@@ -50,6 +51,13 @@ const moveCard = (fromDeck, toDeck) => {
   fromDeck.shift()
 }
 
+// Plays sound of flipping a card
+const playSound = () => {
+  let audio = new Audio("./assets/flip-card.mp3")
+  audio.play()
+}
+
+
 let allCards = [
   {
     "value": 1,
@@ -83,13 +91,12 @@ let allCards = [
   }
 ]
 
+
 let dealerUpcards = []
 let playerUpcards = []
 
 let shuffledCards = shuffleCards(allCards)
 let { dealerDeck, playerDeck } = splitDeck(shuffledCards)
-
-
 
 
 
@@ -107,12 +114,22 @@ const play = () => {
   moveCard(playerDeck, playerUpcards)
   createImg(playerUpcards, playerSection)
   countScore(playerUpcards, playerScore)
+  playSound()
 
   setTimeout(() => {
     moveCard(dealerDeck, dealerUpcards)
     createImg(dealerUpcards, dealerSection)
     countScore(dealerUpcards, dealerScore)
+    playSound()
   }, 700);
 }
 
 
+const hold = () => {
+  setTimeout(() => {
+    moveCard(dealerDeck, dealerUpcards)
+    createImg(dealerUpcards, dealerSection)
+    countScore(dealerUpcards, dealerScore)
+    playSound()
+  }, 700);
+}
