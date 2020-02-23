@@ -15,26 +15,26 @@
     <h1> Black Jack</h1>
   </header>
 
-  <main>
+  <main class="playboard">
 
-    <section class="cards">
 
-      <div class="dealer-cards" id="dealer" onclick="">
-        <img id="" src="" height="400" />
+    <section id="dealer-side" id="dealer" onclick="">
+      <img class="card" src="assets/cards/purple_back.png" />
 
-      </div>
-
-      <div class="player-cards" id="player" onclick="">
-        <img id="player-card" src="" height="400" />
-
-      </div>
 
     </section>
 
-    <section class="controls">
+    <section id="player-side" id="player" onclick="">
+      <img class="card" src="assets/cards/green_back.png" />
 
+
+    </section>
+
+
+
+    <section class="controls">
       <div id="new-game"></div>
-      <button onclick="newGame()">New Game</button>
+      <button onclick="play()">Play</button>
     </section>
 
   </main>

@@ -1,3 +1,5 @@
+
+// shuffle cards
 const shuffleCards = (array) => {
   let currentIndex = array.length
   let temporaryValue
@@ -15,14 +17,20 @@ const shuffleCards = (array) => {
   return array;
 }
 
+// Splits cards into two deck
 const splitDeck = (cards) => {
   const totalCards = cards.length
   const splitIndex = (totalCards / 2)
 
-  const firstDeck = cards.slice(0, splitIndex)
-  const secondDeck = cards.slice(splitIndex, totalCards)
+  const dealerDeck = cards.slice(0, splitIndex)
+  const playerDeck = cards.slice(splitIndex, totalCards)
+  return { dealerDeck, playerDeck }
+}
 
-  return [firstDeck, secondDeck]
+// Moves card from one deck to another
+const moveCard = (fromDeck, toDeck) => {
+  toDeck.push(fromDeck[0])
+  fromDeck.shift()
 }
 
 let allCards = [
@@ -45,24 +53,43 @@ let allCards = [
     "id": 4,
     "type": "hearts",
     "img": "assets/cards/4H.png"
+  },
+  {
+    "id": 5,
+    "type": "hearts",
+    "img": "assets/cards/5H.png"
+  },
+  {
+    "id": 6,
+    "type": "hearts",
+    "img": "assets/cards/6H.png"
   }
 ]
-
-
-let shuffledCards = shuffleCards(allCards)
-
-let [playerHand, dealerHand] = splitDeck(shuffledCards)
-
-
-
-
-
-
-
 
 let dealerUpcards = []
 let playerUpcards = []
 
-let playerCard = document.getElementById("player-card").src = allCards[2].img
-let dealerCard = document.getElementById("player-card").src = allCards[2].img
+let shuffledCards = shuffleCards(allCards)
+let { dealerDeck, playerDeck } = splitDeck(shuffledCards)
 
+
+
+
+
+
+
+
+
+const play = () => {
+  moveCard(dealerDeck, dealerUpcards)
+  createImg(dealerUpcards[0].img)
+
+}
+
+
+const createImg = (imgSrc) => {
+  let img = document.createElement('img')
+  img.src = imgSrc
+  img.className = "card"
+  document.getElementById('dealer-side').appendChild(img);
+}

@@ -17,6 +17,7 @@ body {
 
 header {
   background-color: #FF6E43;
+  height: 100px;
 }
 
 main {
@@ -29,4 +30,34 @@ main {
 
 footer {
   background-color: #FF6E43;
+  height: 100px;
+}
+
+.playboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.dealer-side {
+  background-color: rgb(224, 250, 164);
+  flex-grow: 1;
+}
+
+.player-side {
+  background-color: lightcyan;
+  flex-grow: 1;
+}
+
+.controls {
+  background-color: lightblue;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  min-height: 200px;
+  height: 100%;
+  max-height: 400px;
 }
