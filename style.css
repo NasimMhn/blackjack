@@ -4,6 +4,7 @@
 #FF2600 - red/orange
 #FDB3B3 - pink
 #FF6E43 - orange 
+#CC3429 - hearts red
 */
 
 body {
@@ -13,29 +14,46 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: 'Roboto';
+}
+
+h1 {
+  font-family: Casino, sans-serif;
+  font-size: 90px;
+  margin: 0px;
 }
 
 header {
-  background-color: #FF6E43;
-  height: 100px;
+  background-color: #009549;
+  color: #DAA520;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-main {
+.logo {
+  height: 250px;
+  margin: 10px 0px;
+}
+
+footer {
+  background-color: #CC3429;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playboard {
   /* background-image: url("./assests/green.jpg");
   background-repeat: no-repeat;
   background-size: cover; */
   background-color: #009549;
   flex-grow: 1;
-}
-
-footer {
-  background-color: #FF6E43;
-  height: 100px;
-}
-
-.playboard {
   display: flex;
   flex-direction: column;
+  padding: 0px 30px;
 }
 
 #dealer-side, #player-side {
@@ -58,9 +76,7 @@ footer {
 }
 
 .card {
-  min-height: 200px;
-  height: 90%;
-  max-height: 300px;
+  width: 200px;
 }
 
 .score {
@@ -80,7 +96,7 @@ footer {
   margin: 0;
   border: 1px solid black;
   text-decoration: none;
-  background: linear-gradient(#FF6E43, #FF2600);
+  background: linear-gradient(#FF6E43, #CC3429);
   color: #ffffff;
   font-family: sans-serif;
   font-size: 1.5rem;
@@ -93,7 +109,7 @@ footer {
 }
 
 #hold-btn:hover, #hold-btn:focus {
-  background: linear-gradient(#FF2600, #FF6E43);
+  background: #CC3429;
 }
 
 .show-result {

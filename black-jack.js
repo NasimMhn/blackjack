@@ -1,5 +1,4 @@
 
-
 // Shuffle cards
 const shuffleCards = (array) => {
   let currentIndex = array.length
