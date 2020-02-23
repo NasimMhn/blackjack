@@ -46,7 +46,6 @@ footer {
 }
 
 .controls {
-  background-color: lightblue;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -60,8 +59,8 @@ footer {
 
 .card {
   min-height: 200px;
-  height: 100%;
-  max-height: 400px;
+  height: 90%;
+  max-height: 300px;
 }
 
 .score {
@@ -72,4 +71,43 @@ footer {
   border-radius: 50%;
   text-align: center;
   padding: 30px;
+}
+
+#hold-btn {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  border: 1px solid black;
+  text-decoration: none;
+  background: linear-gradient(#FF6E43, #FF2600);
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#hold-btn:hover, #hold-btn:focus {
+  background: linear-gradient(#FF2600, #FF6E43);
+}
+
+.show-result {
+  background-color: #FDB3B3;
+  height: 200px;
+  width: 400px;
+  position: fixed;
+  top: calc(50% - 100px);
+  left: calc(50% - 200px);
+  z-index: 1;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  font-size: 50px;
 }
