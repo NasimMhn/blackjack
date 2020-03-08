@@ -6,4 +6,4 @@ Note:
 - Not mobile friendly (yet)
 
 Click the link to try it out:
-https://app.netlify.com/sites/blackjack-by-nasim
+https://blackjack-by-nasim.netlify.com/
