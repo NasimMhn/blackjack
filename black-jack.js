@@ -67,6 +67,7 @@ const playSound = () => {
 const showResult = (message) => {
   document.getElementById("result").classList.add("show-result")
   document.getElementById("result").innerText = message
+  document.getElementById("restart-btn").style.display = "inline-block"
 }
 
 let allCards = [
@@ -171,6 +172,12 @@ const hold = () => {
       winner(dealerUpcards, playerUpcards)
     }
   }, 700);
+}
+
+// Restart game button
+const restart = () => {
+  location.reload();
+  return false
 }
 
 const winner = (dealerUpcards, playerUpcards) => {
