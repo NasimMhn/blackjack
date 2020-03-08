@@ -8,7 +8,9 @@
 */
 
 body {
+  background-color: #CC3429;
   margin: 0;
+  width: 100%;
   min-height: 100vh;
   height: 100%;
   display: flex;
@@ -33,7 +35,8 @@ header {
 }
 
 .logo {
-  height: 250px;
+  width: 100%;
+  max-width: 800px;
   margin: 10px 0px;
 }
 
@@ -61,6 +64,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-width: 200px;
+  max-width: 100%;
+}
+
+#dealer-cards, #player-cards {
+  width: 80vw;
 }
 
 .controls {
@@ -76,14 +85,16 @@ footer {
 }
 
 .card {
-  width: 200px;
+  max-width: 200px;
+  min-width: 30px;
+  width: 100%;
 }
 
 .score {
   font-size: 120px;
   border: 2px solid black;
   width: 150px;
-  height: 150px;
+  height: calc(100vh / 100vw * 100%);
   border-radius: 50%;
   text-align: center;
   padding: 30px;
@@ -130,4 +141,44 @@ footer {
   align-items: center;
   border: 2px solid black;
   font-size: 50px;
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+  div.example {
+    font-size: 30px;
+  }
+  .action-btn {
+    font-size: 2rem;
+  }
+  .card {
+    max-width: 80px;
+    min-width: 25px;
+  }
+
+  .score {
+    font-size: 20px;
+    width: 30px;
+  }
+
+  .playboard {
+    background-color: #009549;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+  }
+
+  .show-result {
+    height: 100px;
+    width: 250px;
+    top: calc(50% - 50px);
+    left: calc(50% - 125px);
+    border-radius: 50px;
+    border: 1px solid black;
+    font-size: 30px;
+  }
+  
 }
